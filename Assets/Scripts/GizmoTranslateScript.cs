@@ -138,7 +138,7 @@ public class GizmoTranslateScript : MonoBehaviour {
 
                             } else {
                                 float delta = Input.GetAxis("Mouse X") * (Time.deltaTime * distance);
-                                offset = Vector3.forward * delta;
+                                offset = Vector3.back * delta; // Z-Axis Translate Fix - Anutrix
                                 offset = new Vector3(0.0f, 0.0f, offset.z);
                                 translateTarget.transform.Translate(offset);
                             }

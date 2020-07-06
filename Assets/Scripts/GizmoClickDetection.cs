@@ -76,7 +76,7 @@ public class GizmoClickDetection : MonoBehaviour {
 
             // Detect the object(s) the user has clicked
             Ray ray = gizmoCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit[] hits = Physics.RaycastAll(ray, gizmoLayer);
+            RaycastHit[] hits = Physics.RaycastAll(ray, Mathf.Infinity, gizmoLayer); // Raycast Layer Fix - Anutrix
             bool detected = false;
             pressingPlane = false;
 
